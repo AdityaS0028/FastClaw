@@ -19,7 +19,7 @@ const FAQ = () => {
     },
     {
       q: "Is my data private?",
-      a: "Your assistant runs in a dedicated environment with isolated configuration and encrypted credentials. You own the instance."
+      a: "Your assistant runs in a dedicated environment with isolated configuration and encrypted credentials. You own the agent."
     }
   ];
 

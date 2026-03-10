@@ -26,7 +26,7 @@ const HowItWorks = () => {
     {
       num: "01",
       title: "Launch your assistant",
-      desc: "Click Create Instance. Your OpenClaw server is automatically deployed and configured. No DevOps required."
+      desc: "Click Create Agent. Your OpenClaw server is automatically deployed and configured. No DevOps required."
     },
     {
       num: "02",

@@ -8,14 +8,14 @@ const Pricing = ({ openWaitlist }) => {
       sub: "PERSONAL_RELEASE",
       price: "$19",
       storage: "20 GB Cloud Storage",
-      features: ["1 AI Instance", "Messaging integrations", "Basic automation tools", "Community support"]
+      features: ["1 AI Agent", "Messaging integrations", "Basic automation tools", "Community support"]
     },
     {
       name: "Pro",
       sub: "OPERATOR_EDITION",
       price: "$59",
       storage: "80 GB Cloud Storage",
-      features: ["3 AI Instances", "Advanced integrations", "Custom models", "Priority compute"],
+      features: ["3 AI Agents", "Advanced integrations", "Custom models", "Priority compute"],
       featured: true
     },
     {
@@ -23,14 +23,14 @@ const Pricing = ({ openWaitlist }) => {
       sub: "SYSTEM_MANAGER",
       price: "$129",
       storage: "200 GB Cloud Storage",
-      features: ["10 AI Instances", "API access", "Automation monitoring", "Priority compute"]
+      features: ["10 AI Agents", "API access", "Automation monitoring", "Priority compute"]
     },
     {
       name: "Agency",
       sub: "ENTERPRISE_CORE",
       price: "$299+",
       storage: "1 TB Cloud Storage",
-      features: ["Unlimited instances", "Team management", "White-label platform", "Dedicated compute"]
+      features: ["Unlimited Agents", "Team management", "White-label platform", "Dedicated compute"]
     }
   ];
 

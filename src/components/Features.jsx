@@ -17,7 +17,7 @@ const Features = () => {
         <div className="section-header">
           <h2 className="mono section-tag">/// CAPABILITIES</h2>
           <h3 className="section-title">Turn OpenClaw into a <br /><span className="text-accent">Cloud AI Employee</span></h3>
-          <p className="section-desc">Deploy a fully configured OpenClaw instance that runs continuously in the cloud.</p>
+          <p className="section-desc">Deploy a fully configured OpenClaw agent that runs continuously in the cloud.</p>
         </div>
 
         <div className="features-grid">

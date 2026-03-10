@@ -49,16 +49,16 @@ const WaitlistModal = ({ isOpen, onClose }) => {
     }
 
     setStatus('loading');
-    setMessage('INITIALIZING_HANDSHAKE...');
+    setMessage('CONNECTING...');
 
     try {
       const result = await joinWaitlist(formData);
       if (result.success) {
         setStatus('success');
-        setMessage('NODE_ADDED: Welcome to the grid.');
+        setMessage("Success: You're on the list.");
       } else {
         setStatus('error');
-        setMessage(result.message || 'CONNECTION_FAILED.');
+        setMessage(result.message || 'CONNECTION FAILED.');
       }
     } catch (err) {
       setStatus('error');
@@ -77,12 +77,12 @@ const WaitlistModal = ({ isOpen, onClose }) => {
         </button>
 
         <div className="modal-header">
-          <h2 className="mono section-tag">/// EARLY_ACCESS_PROTOCOL</h2>
+          <h2 className="mono section-tag">/// EARLY ACCESS</h2>
           <h3 className="section-title modal-title">
-            Request an <span className="text-accent">Instance.</span>
+            Request an <span className="text-accent">Agent.</span>
           </h3>
           <p className="section-desc modal-desc">
-            FastClaw is currently in private Alpha. Provide your coordinates to secure priority access.
+            FastClaw is currently in private Alpha. Provide your details to secure priority access.
           </p>
         </div>
 
@@ -96,10 +96,10 @@ const WaitlistModal = ({ isOpen, onClose }) => {
         ) : (
           <form className="waitlist-form" onSubmit={handleSubmit}>
             <div className="input-group">
-              <label className="mono">/// OPERATOR_NAME *</label>
+              <label className="mono">/// NAME *</label>
               <input 
                 type="text" 
-                placeholder="John Matrix"
+                placeholder="John Does"
                 value={formData.name}
                 onChange={e => setFormData({...formData, name: e.target.value})}
                 disabled={status === 'loading'}
@@ -108,10 +108,10 @@ const WaitlistModal = ({ isOpen, onClose }) => {
             </div>
             
             <div className="input-group">
-              <label className="mono">/// COMM_LINK (EMAIL) *</label>
+              <label className="mono">/// EMAIL *</label>
               <input 
                 type="email" 
-                placeholder="matrix@comm.net"
+                placeholder="john@example.com"
                 value={formData.email}
                 onChange={e => setFormData({...formData, email: e.target.value})}
                 disabled={status === 'loading'}
@@ -120,7 +120,7 @@ const WaitlistModal = ({ isOpen, onClose }) => {
             </div>
 
             <div className="input-group">
-              <label className="mono">/// SECURE_LINE (PHONE - OPTIONAL)</label>
+              <label className="mono">/// PHONE (OPTIONAL)</label>
               <input 
                 type="tel" 
                 placeholder="+1 (555) 000-0000"
@@ -142,7 +142,7 @@ const WaitlistModal = ({ isOpen, onClose }) => {
               className="glow-btn full mt-4"
               disabled={status === 'loading'}
             >
-              {status === 'loading' ? 'TRANSMITTING...' : 'INITIATE_REQUEST'}
+              {status === 'loading' ? 'TRANSMITTING...' : 'REQUEST ACCESS'}
             </button>
           </form>
         )}
