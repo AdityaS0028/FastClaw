@@ -166,10 +166,17 @@ const WaitlistModal = ({ isOpen, onClose }) => {
         .modal-container {
           background: var(--bg-darker);
           border: 1px solid var(--accent-color);
-          padding: 3rem;
+          padding: 2rem 1.5rem;
           width: 100%;
           max-width: 500px;
           position: relative;
+          max-height: 90vh;
+          overflow-y: auto;
+        }
+        @media (min-width: 768px) {
+          .modal-container {
+            padding: 3rem;
+          }
         }
         .close-btn {
           position: absolute;

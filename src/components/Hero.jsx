@@ -66,12 +66,17 @@ const Hero = ({ openWaitlist }) => {
           min-height: 90vh;
           display: flex;
           align-items: center;
-          padding-top: 10rem;
+          padding-top: 6rem;
+        }
+        @media (min-width: 768px) {
+          .hero-section {
+            padding-top: 10rem;
+          }
         }
         .hero-title {
-          font-size: 5rem;
+          font-size: clamp(2.5rem, 8vw, 5rem);
           line-height: 1.1;
-          margin: 2rem 0;
+          margin: 1.5rem 0;
           font-weight: 800;
         }
         .text-glow {

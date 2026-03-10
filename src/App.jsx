@@ -40,7 +40,7 @@ function App() {
           <span className="logo-text">FASTCLAW</span>
           <span className="logo-sub">OS_HOST_V.1.0</span>
         </div>
-        <div className="nav-links">
+        <div className="nav-links mobile-hide">
           <a href="#features" className="mono">/// FEATURES</a>
           <a href="#how-it-works" className="mono">/// WORKFLOW</a>
           <a href="#pricing" className="mono">/// ACCESS</a>
@@ -93,32 +93,54 @@ function App() {
           top: 0;
           left: 0;
           width: 100%;
-          padding: 1.5rem 3rem;
+          padding: 1rem 1.5rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
           z-index: 100;
-          backdrop-filter: blur(5px);
+          backdrop-filter: blur(10px);
           border-bottom: 1px solid var(--border-color);
+          background: rgba(2, 2, 2, 0.7);
+        }
+        @media (min-width: 768px) {
+          .hud-nav {
+            padding: 1.5rem 3rem;
+          }
         }
         .logo-text {
           font-family: var(--mono-font);
           font-weight: 800;
-          font-size: 1.5rem;
+          font-size: 1.1rem;
           letter-spacing: 0.2em;
           color: var(--accent-color);
         }
+        @media (min-width: 768px) {
+          .logo-text {
+            font-size: 1.5rem;
+          }
+        }
         .logo-sub {
           font-family: var(--mono-font);
-          font-size: 0.6rem;
+          font-size: 0.5rem;
           opacity: 0.5;
           margin-left: 0.5rem;
           border-left: 1px solid var(--text-muted);
           padding-left: 0.5rem;
+          display: none;
+        }
+        @media (min-width: 1024px) {
+          .logo-sub {
+            display: inline-block;
+          }
         }
         .nav-links {
           display: flex;
-          gap: 3rem;
+          gap: 2rem;
+        }
+        @media (max-width: 768px) {
+          .mobile-hide {
+            display: none;
+          }
         }
         .nav-links a {
           font-size: 0.8rem;

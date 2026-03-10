@@ -55,6 +55,38 @@ const FAQ = () => {
       <style dangerouslySetInnerHTML={{ __html: `
         .faq-section {
           background: var(--bg-color);
+          padding: 6rem 1.5rem;
+          position: relative;
+          overflow: hidden;
+        }
+        @media (min-width: 768px) {
+          .faq-section {
+            padding: 10rem 3rem;
+          }
+        }
+        .bg-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 8rem;
+          font-weight: 900;
+          color: rgba(255, 255, 255, 0.02);
+          white-space: nowrap;
+          pointer-events: none;
+          z-index: 0;
+        }
+        @media (min-width: 768px) {
+          .bg-text {
+            font-size: 15rem;
+            color: rgba(255, 255, 255, 0.03);
+          }
+        }
+        .section-header {
+          position: relative;
+          z-index: 1;
+          text-align: center;
+          margin-bottom: 4rem;
         }
         .faq-list {
           max-width: 800px;
