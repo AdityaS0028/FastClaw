@@ -46,8 +46,9 @@ function App() {
           <a href="#pricing" className="mono">/// ACCESS</a>
         </div>
         <div className="hud-status">
-          <div className="status-dot pulse" />
-          <span className="mono">SYSTEM_STABLE</span>
+          <button className="nav-cta-btn mono" onClick={() => setIsWaitlistOpen(true)}>
+          <span className="dot"></span> TRY_NOW
+        </button>
         </div>
       </nav>
 
@@ -149,22 +150,33 @@ function App() {
         .nav-links a:hover {
           color: var(--accent-color);
         }
-        .hud-status {
+        .nav-cta-btn {
+          background: rgba(0, 242, 255, 0.1);
+          border: 1px solid var(--accent-color);
+          color: var(--accent-color);
+          padding: 0.5rem 1rem;
+          font-size: 0.7rem;
+          cursor: pointer;
+          transition: all 0.3s ease;
           display: flex;
           align-items: center;
-          gap: 0.75rem;
-          font-size: 0.7rem;
+          gap: 0.5rem;
         }
-        .status-dot {
-          width: 6px;
-          height: 6px;
+        .nav-cta-btn:hover {
           background: var(--accent-color);
+          color: var(--bg-color);
+          box-shadow: 0 0 15px var(--accent-color);
+        }
+        .dot {
+          width: 8px;
+          height: 8px;
+          background: #00f2ff;
           border-radius: 50%;
+          display: inline-block;
+          box-shadow: 0 0 10px #00f2ff;
+          animation: pulse 2s infinite;
         }
-        .pulse {
-          animation: pulse-ring 2s infinite;
-        }
-        @keyframes pulse-ring {
+        @keyframes pulse {
           0% { transform: scale(1); opacity: 1; }
           50% { transform: scale(1.5); opacity: 0.5; }
           100% { transform: scale(1); opacity: 1; }
